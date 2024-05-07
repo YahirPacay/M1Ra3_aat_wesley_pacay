@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Empleados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/empleados.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.intecap.edu.gt/centros/cti/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Logotipo_de_el_INTECAP.png" alt="Logo"
+                    width="280" height="" class="d-inline-block align-text-top">
+            </a>
+            <div class="justify-content-end">
+                <a href="https://www.facebook.com/intecapoficial/"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt=""
+                        width="50" class="img-fluid"></a>
+                <a href="https://twitter.com/intecapoficial"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/cc/X_icon.svg" alt="" width="50"
+                        class="img-fluid"></a>
+                <a href="https://www.instagram.com/intecapoficial/?hl=es"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png"
+                        alt="" width="50" class="img-fluid"></a>
+                <a href="https://www.youtube.com/intecapoficial"><img
+                        src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" alt=""
+                        width="50" class="img-fluid"></a>
+                <a href="https://gt.linkedin.com/school/intecapoficial/"><img
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt=""
+                        width="50" class="img-fluid"></a>
+            </div>
+        </div>
+    </nav>
+    <nav class="p-5 nav justify-content-center">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">
+                    <h2>Inicio</h2>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="empleados.html">
+                    <h2>Empleados</h2>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sueldoliquido.html">
+                    <h2>Sueldo Liquido</h2>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="indemnizacion.html">
+                    <h2>Indemnizacion</h2>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-3">
+            <h3 class="text-center">Empleado</h3>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="coloca tu nombre">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Fecha de Ingreso</label>
+                <input type="date" class="form-control" id="fecha"
+                    placeholder="coloca ingresaste a trabajar">
+            </div>
+            <div class="mb-3">
+                <label for="puesto">Puesto</label>
+                <select class="form-select form-select-sm bg-success-subtle" aria-label="Small select example" id="puesto">
+                    <option selected disabled class="text-danger">Selecciona un Puesto</option>
+                    <option value="	Gerente de Producción">	Gerente de Producción</option>
+                    <option value="Contador">Contador</option>
+                    <option value="Piloto">Piloto</option>
+                  </select>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Salario</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Q</span>
+                    <input type="number" class="form-control" id="salario" aria-label="Amount (to the nearest quetzal)">
+                    <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" id="btn_save" class="btn btn-info">Guardar</button>
+            </div>
+
+            <img src="https://yt3.googleusercontent.com/72to4u2Kf6DllNJP3NoYYVppvNWelItQKNM7WGuZ0i6YrqcPKJrxj9M600gzYrLEtZSgRIbpcw=s900-c-k-c0x00ffffff-no-rj"
+                alt="" width="300" class="img-fluid">
+        </div>
+
+
+        <div class="col-7">
+            <div class="position-relative bg-body-tertiary">
+                <div class="p-5 ">
+                    <h3>Lista de Empleados</h3>
+                    <a href=""></a>
+                </div>
+                <div class="p-5 position-absolute top-0 end-0">
+                    <button type="button" id="btn_delete_first" class="btn btn-info ">Eliminar Primero</button>
+                    <button type="button" id="btn_delete_last" class="btn btn-info ">Eliminar Ultimo</button>
+                </div>
+            </div>
+            <table class="table table-dark table-hover table-bordered border-primary" id="tabla">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha de Ingreso</th>
+                        <th scope="col">Puesto</th>
+                        <th scope="col">Salario</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td scope="row">Fernando Palomo</td>
+                        <td>15/02/2020</td>
+                        <td>Gerente de Producción</td>
+                        <td>Q4500</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Mario Kempes</th>
+                        <td>25/06/2006</td>
+                        <td>Contador</td>
+                        <td>Q4000</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Mariano Closs</td>
+                        <td>16/09/2007</td>
+                        <td>Ceo</td>
+                        <td>Q6310</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Luis Omar Tapia</td>
+                        <td>10/01/2003</td>
+                        <td>Asistente de Producción</td>
+                        <td>Q5000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
